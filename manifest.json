@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "拡張機能の名前",
+  "description": "拡張機能の説明",
+  "version": "0.0.1",
+  "permissions": [
+    "https://www.amazon.co.jp/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.co.jp/*"
+      ],
+      "js": [
+        "kuromoji/build/kuromoji.js",
+        "script.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "/kuromoji/dict/*"
+  ]
+}
